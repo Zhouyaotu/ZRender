@@ -7,4 +7,7 @@
 #include <assimp/scene.h>
 #include <assimp/postprocess.h>
 
+#include "stb_image.h"
+#include "stb_image_write.h"
+
 #endif

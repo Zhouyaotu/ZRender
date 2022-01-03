@@ -6,7 +6,7 @@ project(zRenderer)
 aux_source_directory(./code/src SRC)
 include_directories(/usr/local/include ./code/include)
 
-add_executable(${PROJECT_NAME} ${SRC} main.cpp)
+add_executable(${PROJECT_NAME} ${SRC} ./src/main.cpp)
 
 target_link_libraries(${PROJECT_NAME}
     -lpthread

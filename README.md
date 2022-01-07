@@ -8,7 +8,7 @@ A Software Renderer
     类：Mesh(三角形)：将顶点数据组装成mesh 
     功能：Vertex Shader(MVP)
     功能：透视除法与视口变换
-    功能：绘制直线和点
+    功能：绘制点
     功能：遍历mesh外接矩形
     功能：判断像素在三角形内
     功能：重心坐标插值
@@ -22,6 +22,7 @@ A Software Renderer
     功能：裁剪
     功能：背面剔除
     功能：FragmentShader(纹理映射)
+    功能：绘制直线
 
 ## 依赖
     操作系统：Ubuntu

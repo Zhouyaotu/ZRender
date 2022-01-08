@@ -28,6 +28,5 @@ int main(int argc, char** argv)
 
     stbi_image_free(data);
 
-
     return 0;
 }

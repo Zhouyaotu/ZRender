@@ -1,5 +1,9 @@
 #include "global.hpp"
+#include "Mesh.hpp"
+#include "Model.hpp"
+
 #include <cstdio>
+#include <iostream>
 
 int main(int argc, char** argv)
 {
@@ -12,7 +16,6 @@ int main(int argc, char** argv)
     printf("%d, %d, %d\n", w, h, n);
 
     //change pixel
-
     //rgba,write 10 red pixel at line 11
     for (int dx = 0; dx < 10; ++dx)
     {
@@ -27,6 +30,9 @@ int main(int argc, char** argv)
     stbi_write_png("write.png", w, h, n, data, w * n);
 
     stbi_image_free(data);
+
+    // assimp
+    Model mod1 = Model("../asset/model/marry/Marry.obj");
 
     return 0;
 }

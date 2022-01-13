@@ -1,6 +1,6 @@
 #include"Rasterizer.hpp"
 
-Rasterizer::Rasterizer()
+Rasterizer::Rasterizer(int w, int h)
 {
     
 }

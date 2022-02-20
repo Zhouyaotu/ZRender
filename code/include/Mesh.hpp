@@ -1,7 +1,7 @@
 #ifndef MESH_H
 #define MESH_H
 
-#include"global.hpp"
+#include "global.hpp"
 
 struct Vertex
 {
@@ -21,26 +21,26 @@ private:
     Eigen::Vector3f ka,kd,ks;
 
 public:
-    Mesh(/* args */);
+    Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices)
+    {
+        this->vertices = vertices;
+        this->indices = indices;
+
+        this->ka = Eigen::Vector3f(0.1, 0.1, 0.1);
+        this->kd = Eigen::Vector3f(0.7, 0.7, 0.7);
+        this->ks = Eigen::Vector3f(0.2, 0.2, 0.2);
+    }
+        
     Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices,
-             Eigen::Vector3f ka, Eigen::Vector3f kd, Eigen::Vector3f ks);
-    ~Mesh();
-};
-
-Mesh::Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, 
              Eigen::Vector3f ka, Eigen::Vector3f kd, Eigen::Vector3f ks)
-{
-    this->vertices = vertices;
-    this->indices = indices;
+    {
+        this->vertices = vertices;
+        this->indices = indices;
 
-    this->ka = ka;
-    this->kd = kd;
-    this->ks = ks;
-}
-
-Mesh::~Mesh()
-{
-}
-
+        this->ka = ka;
+        this->kd = kd;
+        this->ks = ks;
+    }         
+};
 
 #endif

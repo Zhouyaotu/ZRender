@@ -4,6 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 project(zRenderer)
 
 aux_source_directory(./code/src SRC)
+aux_source_directory(./code/include INC)
 include_directories(/usr/local/include ./code/include)
 
 add_executable(${PROJECT_NAME} ${SRC} ./code/main.cpp)
